@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./public/style.css">
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <nav id="nav">
+        <img src="./assets/images/logo.svg" alt="Company logo" class="logo">
+
+        <ul class="menu-options">
+          <li>
+            <a href="http://"><img src="./assets/images/icon-document.svg" alt="document"></a>
+          </li>
+          <li>
+            <a href="http://"><img src="./assets/images/icon-folder.svg" alt="folder"></a>
+          </li>
+          <li>
+            <a href="http://"><img src="./assets/images/icon-upload.svg" alt="upload"></a>
+          </li>
+        </ul>
+
+      </nav>
+      <main>
+        <div class="storage">
+          <div class="storage-status">
+            You’ve used
+            <strong>815 GB</strong>
+            of your storage
+          </div>
+          <div class="storage-bar">
+            <div class="storage-percentage-bar">
+              <div class="bar-circle"></div>
+            </div>
+          </div>
+          <div class="storage-capacity">
+            <p>
+              <strong>
+                0 GB
+              </strong>
+            </p>
+            <p>
+              <strong>
+                1000 GB
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div class="storage-left">
+          <span class="big-font">
+            185
+          </span>
+          <span class="grey-font">
+            GB Left
+          </span>
+          <div class="arrow"></div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="#">Samuel Bacelar</a>.
+    </div>
+  </body>
+</html>

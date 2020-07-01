@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+body {
+    background-image: url('../assets/images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--very-dark-blue);
+
+    color: hsl(243, 100%, 93%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 900px;
+    margin: 100px auto;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    max-width: 330px;
+    min-width: 330px;
+    padding: 20px 40px;
+
+    background: var(--dark-blue);
+
+    border-radius: 15px 100px 15px 15px;
+}
+
+#nav .logo {
+    width: 150px;
+    margin: 15px 0;
+}
+
+#nav .menu-options {
+    display: flex;
+    margin: 15px 0;
+    list-style-type: none;
+}
+
+#nav .menu-options li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--very-dark-blue);
+
+    width: 42px;
+    height: 42px;
+    margin: 5px;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+#nav .menu-options li img {
+    width: 20px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+main .storage {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 800px;
+    min-width: 330px;
+    
+    padding: 20px 40px 40px;
+
+    background: var(--dark-blue);
+
+    border-radius: 15px 15px 15px 15px;
+}
+
+main .storage .storage-status {
+    margin: 15px 0;
+    color: var(--grayish-blue);
+}
+
+main .storage .storage-status strong {
+    color: var(--pale-blue);
+}
+
+main .storage .storage-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background: var(--very-dark-blue);
+} 
+
+main .storage .storage-bar .storage-percentage-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 75%;
+    height: 14px;
+    margin-left: 3px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+
+    border-radius: 10px;
+}
+
+main .storage-percentage-bar .bar-circle {
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+
+    background: #fff;
+    border-radius: 50%;
+}
+
+main .storage .storage-capacity {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+
+main .storage-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 15px 20px;
+
+    width: 200px;
+    height: auto;
+
+    background: #fff;
+    color: black;
+
+    border-radius: 10px;
+    z-index: 2;
+}
+
+main .storage-left .big-font {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+main .storage-left .grey-font {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--grayish-blue);
+    margin-left: 10px;
+}
+
+
+
+
+/*____________________ MEDIA QUERIES____________________________ */
+
+@media only screen and (min-width : 768px) {
+    body {
+        background: url('../assets/images/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-y: 280px;
+        background-color: var(--very-dark-blue);
+        
+    }
+  #container {
+      flex-direction: row;
+      align-items: flex-end;
+      margin: 200px auto 200px;
+      padding: 0 30px;
+  }
+
+  main {
+      flex-grow: 1;
+      margin-left: 40px;
+  }
+
+  main .storage {
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 20px 40px;
+  }
+
+  main .storage-left {
+     top: 185px;
+     left: 80%;
+  }
+
+  main .storage-left .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 35px 35px 0;
+    border-color: transparent #fff transparent transparent;
+
+    position: relative;
+    top: 40px;
+    right: -20px;
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+    main .storage-left {
+        left: 70%;
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    main .storage-left {
+        left: 68%;
+    }
+}
+
+@media only screen and (min-width : 2560px) {
+    main .storage-left {
+        left: 60%;
+    }
+}
